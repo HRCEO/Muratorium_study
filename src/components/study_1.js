@@ -11,10 +11,10 @@ const Study_1 = () => {
     useEffect(()=>{
         const svg = select(svgRef.current);
         svg
-            .selectAll("circle")
+            .selectAll("circle")  // circle tag를 찾아 아래 데이터를 추가 한다.
             .data(data)
-            .join("circle")
-            .attr("r", value => value)
+            .join("circle") // circle tag를 생성 한다.
+            .attr("r", value => value) // 특성 값을 제공 한다.
             .attr("cx", value => value*2)
             .attr("cy", value => value *2)
             .attr("stroke","red");
